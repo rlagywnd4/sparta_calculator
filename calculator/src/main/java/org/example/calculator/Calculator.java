@@ -42,6 +42,9 @@ public class Calculator {
                         System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
                     }
                     break;
+                default:
+                    System.out.println("사칙 연산 기호가 아닌 다른 기호를 입력하셨습니다.");
+                    continue;
             }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
