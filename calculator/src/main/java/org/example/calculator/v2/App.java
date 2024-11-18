@@ -55,6 +55,6 @@ public class App {
 
     public static void printResults(Calculator calculator){
         System.out.println("결과 목록 :");
-        calculator.getResults().forEach((result) -> System.out.println(result));
+        calculator.getResults().forEach(System.out::println);
     }
 }
