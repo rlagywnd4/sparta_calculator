@@ -9,8 +9,6 @@ public class Calculator {
         this.results = results;
     }
 
-    // 연산 결과를 저장하는 컬렉션 타입 필드
-    // 사칙연산 수행후, 결과값 반환 메서드 구현
     public void calculate(char operator, int firstNumber, int secondNumber) {
         switch (operator) {
             case '+':
