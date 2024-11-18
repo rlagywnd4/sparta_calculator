@@ -3,7 +3,7 @@ package org.example.calculator.v2;
 import java.util.Queue;
 
 public class Calculator {
-    Queue<Integer> results;
+    private Queue<Integer> results;
 
     Calculator(Queue<Integer> results){
         this.results = results;
@@ -36,5 +36,12 @@ public class Calculator {
         }
     }
 
+    public Queue<Integer> getResults(){
+        return this.results;
+    }
+
+    public void setResults(Queue<Integer> results){
+        this.results = results;
+    }
 
 }
