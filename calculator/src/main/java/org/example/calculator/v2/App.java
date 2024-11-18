@@ -37,23 +37,23 @@ public class App {
         }
     }
 
-    public static void repeatRemoveUntilStop(Calculator calculator){
+    public static void repeatRemoveUntilStop(Calculator calculator) {
         Scanner scanner = new Scanner(System.in);
 
-        while(!calculator.getResults().isEmpty()) {
+        while (!calculator.getResults().isEmpty()) {
             printResults(calculator);
             System.out.println("가장 먼저 계산된 결과를 삭제하시겠습니까? (yes 입력시 삭제)");
             String prompt = scanner.next();
 
             if (prompt.equals("yes")) {
                 calculator.removeResult();
-            }else{
+            } else {
                 break;
             }
         }
     }
 
-    public static void printResults(Calculator calculator){
+    public static void printResults(Calculator calculator) {
         System.out.println("결과 목록 :");
         calculator.getResults().forEach(System.out::println);
     }
