@@ -29,10 +29,25 @@ public class App {
 
             calculator.calculate(operator, firstNumber, secondNumber);
 
+            repeatRemoveUntilStop(calculator);
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             isRunning = !scanner.next().equals("exit");
 
         }
+    }
 
+    public static void repeatRemoveUntilStop(Calculator calculator){
+        Scanner scanner = new Scanner(System.in);
+
+        while(!calculator.getResults().isEmpty()) {
+            System.out.println("결과를 삭제하시겠습니까? (yes 입력시 삭제)");
+            String prompt = scanner.next();
+
+            if (prompt.equals("yes")) {
+                calculator.removeResult();
+            }else{
+                break;
+            }
+        }
     }
 }

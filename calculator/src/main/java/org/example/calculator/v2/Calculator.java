@@ -16,12 +16,15 @@ public class Calculator {
             case '+':
                 System.out.println("결과 : " + (firstNumber + secondNumber));
                 results.add((firstNumber + secondNumber));
+                break;
             case '-':
-                System.out.println("결과 : " + (firstNumber - secondNumber));
-                results.add((firstNumber - secondNumber));
+            System.out.println("결과 : " + (firstNumber - secondNumber));
+            results.add((firstNumber - secondNumber));
+                break;
             case '*':
-                System.out.println("결과 : " + (firstNumber * secondNumber));
-                results.add((firstNumber * secondNumber));
+            System.out.println("결과 : " + (firstNumber * secondNumber));
+            results.add((firstNumber * secondNumber));
+                break;
             case '/':
                 if (secondNumber != 0) {
                     System.out.println("결과 : " + (firstNumber / secondNumber));
@@ -42,6 +45,10 @@ public class Calculator {
 
     public void setResults(Queue<Integer> results){
         this.results = results;
+    }
+
+    public void removeResult(){
+        results.poll();
     }
 
 }
